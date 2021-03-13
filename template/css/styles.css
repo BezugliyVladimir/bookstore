@@ -1,0 +1,1270 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 2. v2.0 | 20110126
+License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+@font-face{
+  
+src:url("../fonts/OpenSans-Regular.ttf") format("truetype"); 
+  font-style: normal; 
+  font-weight: normal; 
+}
+/* for all templates and grids */
+html{
+  height:100%;
+}
+body{
+  font-family:"Open Sans", sans-serif;
+  text-align:center;
+  height:100%;
+    }
+/**/
+/* 750 centered, and backward compatibility */ 
+#wide-band, #document-box,.breadth {
+  margin:auto;
+  width:57.69em;*width:56.3em;min-width:750px;}
+
+/* 950 centered */ 
+#wide-band, #document-box {
+  width:73.074em;*width:71.313em;min-width:950px;}
+/* 100% with 10px viewport side matting */ 
+
+  
+/* below required for all fluid grids; adjust widths and margins above accordingly */
+
+  /* to preserve source-order independence for Gecko */
+.case{position:relative;}
+.case{_position:static;} /* for IE < 7 */
+#box-main .case{position:static;} 
+
+#box-main {width:100%;}
+.breadth #box-main{float:right;margin-left:-25em;/* IE: preserve layout at narrow widths */}
+
+.breadth .case {
+  float:left;
+  width:12.3207em;*width:12.0106em;}
+.breadth #box-main .case{
+  margin-left:13.3207em;*margin-left:13.0106em;
+}
+
+#box-main .case {float:none;width:auto;text-align:left}
+
+.wrapper{
+  min-height:100%;
+  margin-bottom:50px;
+}
+
+/*  ================= TOP ==================*/
+
+.top{
+  height: 50px;
+  background:#CCFFFF;
+}
+
+/*
+
+==========GRID FOR HEADER===============
+
+*/
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.header,
+.row{
+  width:inherit;
+  margin:0 auto;
+}
+
+.col-1-2,
+.col-1-4-first,
+.col-1-4-second{
+  display: inline-block;
+  vertical-align: top;
+}
+.row,
+.col-1-2,
+.col-1-4-first,
+.col-1-4-second{
+  padding-left:5px;
+  padding-right:5px;
+}
+
+.col-1-4-first
+{
+  width: 25%;
+}
+.col-1-4-second{
+  width:25%;
+}
+.col-1-2 {
+  width: 50%;
+}
+
+/* Clearfix*/
+
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+.clearfix{overflow:hidden; zoom:1;}
+
+
+
+/*
+
+====================HEADER=================
+
+*/
+h3, h4{
+  margin:0;
+}
+#header{
+  height:190px;
+  margin:0;
+  padding:0;
+}
+  
+#header h1{
+  font-size:1em;
+  margin:0;
+  padding:10px;
+}
+
+#header #head{
+  text-align:center;
+  margin-bottom: 10px;
+}
+  
+#personal a{  
+  text-align: center;
+}
+#logo{
+  padding-top: 20px;
+  margin:0;
+}
+#personal{
+  padding-top: 8px;
+  margin:0;
+}
+#logo a{
+  overflow:visible;
+}
+  
+#logo h3{
+  padding-bottom:5px;
+}
+#contacts{
+  text-align:left;
+}
+.icon{
+  display:inline-block;
+}
+.icon img{
+  width:14px;
+  height:14px;
+}
+.contacts{
+  margin-right:20px;
+  margin-bottom:10px;
+}
+.contacts, .icon, #telephone, #schedule, #mail{
+  display:inline-block;
+}
+#telephone, #schedule, #mail{
+  font-family:Arial, Verdana, sans-serif;
+  font-size:14px;
+}
+
+/*====================ORDERFORM, CONTACT, REGISTRATION===================*/
+.results{
+   font-size:15px;
+   margin-left:50px;
+   margin-bottom:20px;
+}
+
+#total{
+   margin-bottom:10px;
+}
+.bold{
+   font-size:16px;
+   font-weight:700;
+}
+
+div#orderform form, div#show_form form, .register-form form{
+  width:500px;
+  float:left;
+  margin-left:5px;
+  margin-top:10px;
+  margin-bottom:10px;
+}
+#but{
+  font-size:16pt;
+  background:green;
+  margin-top:20px;
+}
+
+div#orderform form input, div#show_form form input {
+  margin-bottom: 15px;
+}
+div#orderform form .help, div#show_form form .help,
+.register-form .help{
+  line-height:1.42;
+  color: red;
+  margin-left:5px;
+  text-align:left;
+  width:350px;
+  font-size:15px;
+}
+div#orderform label, div#show_form label, .register-form form input,
+log-on-form form input{
+  float:left;
+  padding-right: 10px;
+  font-size:15px;
+}
+.field, #metka{
+  text-align:right;
+}
+.field input{
+  height:30px;
+  border:1px solid #0099cc;
+  border-radius:4px;
+}
+.field textarea{
+  border:1px solid #0099cc;
+  border-radius:4px;
+}
+/*=================FORMS SEARCH AND REGISTRATION=======================*/
+#search{
+  text-align:left;
+  margin-left:20px;
+}
+#search-text{
+  padding-left:10px;
+  width:400px;
+}
+
+#success-register{
+  margin-bottom:20px;
+  color:red;
+  text-align: center;
+}
+.register-form .red-border{
+  border-color:red;
+}
+
+.container-register, .container-login,
+.container-account, .container-change{
+  width:95%;
+  padding-right:15px;
+  padding-left:15px;
+  margin-right:auto;
+  margin-left:auto;
+}
+
+.row-register, .row-login
+.row-account, .row-change{
+  margin-right:-15px;
+  margin-left:-15px;
+}
+.register, .login, .change-user-data{
+  margin-left:33%;
+  width:33%;
+  float:left;
+  position:relative;
+  min-height:1px;
+}
+
+.row-register h2, .row-login h2,
+.row-account h2{
+  font-size:24px;
+  line-height:1.42;
+  color:#ff6800;
+  margin-bottom:50px;
+ }
+.row-account h4{
+  font-size:20px;
+  line-height:1.42;
+  margin-bottom:20px;
+}
+.register-form form, .log-on-form form{
+  width:100%;
+  margin-top:20px;
+  float:left;
+  margin-left:5px;
+}
+.register-form form input, .log-on-form form input{
+  width:100%;
+  margin-bottom:12px;
+  padding-left:10px;
+  font-size:14px;
+  background:#fff;
+}
+.search-text, .search-button, .register-form form input, .log-on-form form input{
+  height:40px;
+  border:1px solid #0099cc;
+  border-radius:5px;
+}
+
+#search form{
+  padding-top: 20px;
+}
+.register-form, .log-on-form,
+.change-user-data{
+  text-align:left;
+}
+.change-user-data h2{
+   margin-top:30px;
+   margin-bottom:20px;
+   padding-left:10px;
+   font-size:18px;
+   color:#ff6800;
+}
+.change-user-data p{
+   padding-left:10px; 
+}
+
+ul.errors li{
+  line-height:1.42;
+  font-size:15px;
+  font-weight:400;
+  padding-left:10px;
+  color:red;
+}
+.register .register-form form input.border-error{
+  border-color:red;
+}
+
+/*===================BUTTONS=====================*/
+#search-button{
+  width:120px;
+  cursor:pointer;
+  background-color:#fff;
+  font-size:18px;
+  font-weight:300;
+  color:#0000ff;
+  margin-left:3px;
+}
+.register-form form input.btn,
+.log-on-form form input.btn{
+  font-size:18px;
+  color:#0000ff;
+}
+#search-button:hover, .register-form form input.btn:hover,
+.log-on-form form input.btn:hover{
+  background-color:#0099cc;
+  cursor:pointer;
+  font-size:18px;
+  color:#fff;
+}
+
+/*==============PLACEHOLDERS===============*/
+
+.register-form form input::-webkit-input-placeholder,
+             #search-text::-webkit-input-placeholder, 
+                   #phone::-webkit-input-placeholder{
+  color:#999999;font-size:14px; opacity: 1; transition: opacity 0.3s ease;
+}
+
+.register-form form input::-moz-placeholder,
+             #search-text::-moz-placeholder, 
+                   #phone::-moz-placeholder{
+  color:#999999;font-size:14px; opacity: 1; transition: opacity 0.3s ease;
+}
+
+.register-form form input:-moz-placeholder,
+             #search-text:-moz-placeholder,
+                   #phone:-moz-placeholder{
+  color:#999999;font-size:14px; opacity: 1; transition: opacity 0.3s ease;
+}
+
+.register-form form input:-ms-input-placeholder,
+             #search-text:-ms-input-placeholder, 
+                   #phone:-ms-input-placeholder{
+  color:#999999;font-size:14px; opacity: 1; transition: opacity 0.3s ease;
+}
+
+.register-form form input:focus::-webkit-input-placeholder,
+             #search-text:focus::-webkit-input-placeholder,
+                   #phone:focus::-webkit-input-placeholder{
+  opacity: 0; transition: opacity 0.3s ease;
+}
+
+.register-form form input:focus::-moz-placeholder,
+             #search-text:focus::-moz-placeholder,
+                   #phone:focus::-moz-placeholder{
+  opacity: 0; transition: opacity 0.3s ease;
+}
+
+.register-form form input:focus:-moz-placeholder,
+             #search-text:focus:-moz-placeholder, 
+                   #phone:focus:-moz-placeholder{
+  opacity: 0; transition: opacity 0.3s ease;
+}
+
+.register-form form input:focus:-ms-input-placeholder,
+             #search-text:focus:-ms-input-placeholder, 
+                   #phone:focus:-ms-input-placeholder{
+  opacity: 0; transition: opacity 0.3s ease;
+}   
+
+/*
+========GORIZONTAL MENU==========
+*/
+
+#tabs  {
+  overflow:hidden;
+  font-size:100%;
+  line-height:normal;
+  margin-top:32px;
+  margin-left:20px;
+}
+
+
+#tabs ul.top-menu {
+  margin:0;
+  list-style-type:none;
+  padding:0;
+  width:100%;
+  float:left;
+}
+
+#tabs li {
+  display:list-item;
+  margin:0;
+  padding:0;
+  float:left;
+  cursor:pointer;
+}
+
+#tabs a {
+  float:left;
+  margin:0;
+  padding:0 0 0 4px;
+  text-decoration:none;
+  display:block;
+  position:relative;
+}
+
+#tabs a span {
+  float:left;
+  display:block;
+  padding:5px 15px 4px 6px;
+  font-size:14px;
+  color:#336699;
+}
+
+/* Commented Backslash Hack hides rule from IE5-Mac \*/
+#tabs a span {float:none;}
+/* End IE5-Mac hack */
+
+#tabs a:hover span {
+  color:#FF3333;
+}
+
+/*============REGISTRATION in HEADER=============*/
+#register{
+  overflow:hidden;
+  font-size:100%;
+  line-height:normal;
+  margin-top:32px;
+}
+#register ul.personal{
+  margin:0;
+  list-style-type:none;
+  padding-left:50px;
+  width:100%;
+  float:left;
+  }
+#register li {
+  display:list-item;
+  margin:0;
+  padding:0;
+  float:left;
+  cursor:pointer;
+  }
+#register a {
+  float:left;
+  margin:0;
+  padding:0 0 0 4px;
+  text-decoration:none;
+  display:block;
+  position:relative;
+}
+#register a span {
+  float:right;
+  display:block;
+  padding:5px 15px 4px 6px;
+  font-size:14px;
+  color:#336699;
+}
+/* Commented Backslash Hack hides rule from IE5-Mac \*/
+#register a span {float:none;}
+/* End IE5-Mac hack */
+
+#register a:hover span {
+  color:#FF3333;
+}
+
+.col-1-4-first .header-content,
+.col-1-2 .header-content{
+  height:180px;
+  margin: 0;
+}
+.col-1-4-second .header-content{
+  height:180px;
+}
+  
+/*===================BASKET in HEADER=================*/
+
+#basket{
+  margin-top: 10px;
+  height: 110px;
+} 
+#basket-title{
+  font-size:16px;
+  color:#847676;
+  font-weight:bold;
+  padding:5px 0 0 0;
+}
+#basket-details{
+  width:170px;
+  float:left;
+  padding-top:10px;
+  padding-left:55px;
+  text-align:left;
+}
+#q-ty, #price{
+  color:#ff3333;
+}
+.basket{
+  font-size:14px;
+}
+
+#basket-image{
+  float:left;
+  margin-left:5px;
+}
+span#border{
+  width:110px;
+  height:1px;
+  margin:3px 0 3px 0;
+  display:block;
+  border-top:1px #999999 dotted;
+}
+
+/* =================BASKET====================*/
+#count{
+  font-size:14px;
+}
+
+#border-header{
+  position:relative;
+  height:0px;
+  border-bottom:2px solid #DCDCDC;
+  top:191px;
+  margin-bottom:10px;
+}
+
+#result{
+  margin:15px;
+}
+#no-goods{
+  text-align:center;
+  margin-top:30px;
+}
+#empty-basket{
+  font-size:16px;
+}
+
+/*
+
+===============CATALOG ===============
+
+*/
+
+#title-main-content h1{
+  text-align:center;
+  margin-bottom: 20px;
+}
+.prod-category a{
+  line-height:1.3;
+  font-size:14px;
+  color:#336699;
+}
+#product{
+  display:block;
+  margin-top:20px;
+}
+#delete{
+  position:absolute;
+  left:10px;
+}
+#delete a{
+  display:block;
+  width:15px;
+  height:15px;
+  background:url(../picture/icon/cancel_red.svg) 100% 100% no-repeat;
+  -webkit-background-size:cover;
+       -o-background-size:cover;
+     -moz-background-size:cover;
+          background-size:cover;
+  -moz-opacity:0.5;
+       opacity:0.5;
+}
+#delete a:hover{
+  -moz-opacity:1;
+  opacity:1;
+}
+#code-item{
+  position:absolute;
+  right:10px; 
+}
+#code-title{
+  font-size: 12px;
+}
+#code-number{
+  font-size: 14px;
+}
+.prod-box {
+  position:relative;
+  padding:10px 12px 10px 10px;
+  display:inline-block;
+  vertical-align:top;
+  width:230px;
+  height:auto;
+  background:#FFF;
+  margin-right:5px;
+  margin-top:10px;
+  text-align:center;
+  -webkit-transition:all 0.3s ease;
+  -moz-transition:all 0.3s ease;
+  -o-transition:all 0.3s ease;
+  transition:all 0.3s ease;
+}
+
+.prod-box:hover{
+  box-shadow:inset 0 0 0 3px #dee0ee;
+}
+.prod-box a, .border-box a{
+  text-decoration:none;
+}
+.prod-title{
+  padding: 5px 0 5px 0;
+  height: auto;
+}
+.prod-title a, .prod-basket a{
+  color: #336699;
+  font-size:14px;
+}
+.prod-author span{
+  font-size:13px;
+  color:#303030;
+}
+.prod-title a, .prod-basket a, .prod-author span {
+  display:block;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  text-align: left;
+  line-height:1.3;
+  margin-left: 5px;
+  margin-right: auto;
+}
+.prod-img img{
+  height: 230px;
+  width: 150px;
+  padding: 5px 0 5px 0;
+  margin-top: 5px;  
+}
+.prod-img{
+  position:relative;
+}
+.image-goods{
+  position:relative;
+}
+#discount2{
+  position:absolute;
+  top:0px;
+  left:0px;
+}
+#discount2 img{
+  height:60px;
+  width:60px;
+}
+
+#discount-big{
+  position:absolute;
+  top:20px;
+  left:25px;
+}
+#discount-big img{
+  height:90px;
+  width:90px;
+}
+.prod-title a:hover,
+.prod-category a:hover, .prod-basket a:hover{
+  text-decoration:underline;
+  color:#ff9900;
+}
+.prod-author,
+.prod-category{
+  height:20px;
+}
+.prod-author{
+  margin-bottom:12px;
+}
+
+.red a:hover {
+  color:#FF0000;
+}
+
+/*=============PRICE==============*/
+
+.price, #hot-price{
+  text-align:center;
+  font-weight: bold;
+}
+.prod-price{
+  width:50%;
+  float:left;
+  font-size:17px;
+}
+.order{
+  float:right;
+  width:50%;
+}
+.not-available{
+  padding-top:10px;
+  font-size:14px;
+}
+.prod-basket{
+  padding-left:20px;
+}
+.old-price{
+  text-align:left;
+}
+span.reduce{
+  margin-left:19px;
+  color:#999999;
+  text-decoration:line-through;
+  font-size:13px;
+}
+span.price{
+  color:#ff6800;
+}
+#hot-price{
+  color:#ea2222;
+}
+.notAvail{
+  height: 22px;
+}
+.notAvail span{
+  text-align: center;
+  font-size: 1em;
+  text-decoration: none;
+}
+/*==============PAGINATION================*/
+
+ul.pagination{
+  display:inline-block;
+  margin-bottom:25px;
+  margin-top:20px;
+  padding-left:15px;
+  border-radius:4px;
+}
+.pagination li a{
+  border:0;
+  float:left;
+  line-height:1.42;
+  padding:6px 12px;
+  position:relative;
+  text-decoration:none;
+  margin-right:5px;
+  color:#000000;
+  background-color:#f0f029;
+  background:transparent;
+}
+.pagination > li{
+  display:inline;
+}
+ul li{
+  list-style:none;
+}
+.pagination .active a, .pagination .active a:hover,
+.pagination .active a:focus{
+  background-color:#FE980F;
+  border-color:#FE980F;
+  color:#ffffff;
+  cursor:default;
+  z-index:2;
+}
+
+/*==============PROMOTIONAL ITEM=====================*/
+img {
+  border: none;
+  }
+.box-title{
+  height:30px;
+  margin:5px 0 0 0;
+  padding:5px 0 0 0;
+  background: rgba(105, 157, 199, 0.5 );
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  text-align:center;
+  font-size:18px;
+  font-weight:bold;
+  line-height:21px;
+  letter-spacing:3px;
+  text-align:left;
+  padding-left:10px;
+}
+.box-title span, #title-main-content h1{
+  color:#ff6800;
+  font-size:22px;
+}
+
+.product_img{
+  position:relative;
+}
+.hot{
+  position:absolute;
+  top:0px;
+  right:0px;
+}
+.hot img{
+  height:50px;
+  width:50px;
+  padding:0px;
+  margin:0px;
+}
+.border-box{
+  width:197.125px;
+  height:auto;
+  text-align:center;
+  border:1px #6da6b1 solid;
+  overflow:hidden;
+  zoom:1;
+  padding-bottom:8px;
+}
+.border-box:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+
+img#rand{
+  height:140px;
+}
+.prod-title.center a, .prod-author.center span{
+  text-decoration:none;
+  text-align:center;
+  margin-top:5px;
+}
+  .prod-title.center a:hover{
+  text-decoration:underline;
+}
+.stock{
+  height:50px;
+  color:#FF3333;
+}
+.order.stock {
+  width:50%;
+}
+.text{
+  height: 22px;
+}
+/*=============BUTTONS=============*/
+#buttons{
+  text-align:center;
+}
+.buttons{
+  display:inline-block;
+}
+.button{
+  display: inline-block;
+  padding: .4em 1em;
+  outline: none;
+  border-width: 2px 0;
+  border-style: solid none;
+  border-color: #FDBE33 #000 #D77206;
+  border-radius: 6px;
+  background: linear-gradient(#F3AE0F, #E38916) #E38916;
+  transition: 0.2s;
+  height:34px;
+}
+
+.button, .button a{
+  color:#fff;
+  display:block;
+  text-decoration: none;
+}
+#metka{
+  width:160px;
+  text-align:center;
+  margin-left: 340px;
+  margin-top:10px;
+}
+#metka input[type=button]{
+  border:none;
+  background:none;
+  outline:none;
+  color:#fff;
+  transition: 0.2s;
+  line-height: 0.8;
+  font-size:20px;
+  letter-spacing: 3px;
+}
+#metka input:hover{
+  cursor:pointer;
+}
+
+.button:hover { background: linear-gradient(#f5ae00, #f59500) #f5ae00; }
+.button:active { background: linear-gradient(#f59500, #f5ae00) #f59500;}
+.buttons input{
+  display:block;
+  height:34px;
+  font-size:16px;
+  font-weight:bold;
+}
+.buttons input:hover{
+  cursor:pointer;
+}
+
+.black{
+  color: #333333;
+}
+.border-goods{
+  text-align:center;
+  height: 0px;
+  border-bottom: 2px solid #DCDCDC;
+  margin-bottom: 10px;
+}
+
+
+/*
+
+======================SECTIONS=================
+
+*/
+
+div.section{
+  float:left;
+  text-align:justify;
+  font-size:17px;
+}
+/*====================SEARCH====================*/
+#title{
+  padding-left:10px;
+}
+.radio{
+  padding-left:10px;
+  text-align:justify;
+  width: 200px;
+}
+.text_search{
+  margin-top:5px;
+}
+/*
+======================LEFT CONTENT===============
+
+*/
+#secondary{
+  border-top:#FFFFFF 2px solid;
+  margin-bottom:20px;
+  padding:0;
+}
+  
+#secondaryFull{
+  height:50px;
+  background-color:#CFB59F;
+  border-top:#FFFFFF 2px solid;
+  margin:0;
+  padding:0;
+}
+  
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.login ul{
+  text-align:left;
+  line-height:1.5;
+}
+.login ul li{
+  padding-left:10px;
+  font-size:15px;
+  color:red;
+}
+#nonedec{
+  list-style-type:none;
+}
+#nonedec a{
+  display:block;
+  text-decoration:none;
+  color:#ff3333;
+}
+
+.catalog:hover{
+  background: rgb(105, 157, 199);
+}
+
+
+
+/*--------left menu---------*/
+  
+ul.left_menu{
+  padding:0px;
+  margin:0px;
+  list-style:none;
+}
+ul.left_menu li{
+  margin:0px;
+  list-style:none;
+  font-size:18px;
+  text-align:left;
+}
+ul.left_menu li.odd a{
+  height:30px;
+  display:block;
+  background-color: #dad0d0; 
+  background-position:5px 5px;
+  border-bottom:1px #FFFFFF solid;
+  text-decoration:none;
+  color:#342A2A;
+  line-height:25px;
+}
+ul.left_menu li.odd a, ul.left_menu li.even a{
+  padding-left:10px;
+}
+ul.left_menu li.big a{
+  height:60px;
+}
+ul.left_menu li.even a{
+  height:30px;
+  display:block;
+  background-color:#eee6e6;
+  background-position:5px 5px;
+  border-bottom:1px #FFFFFF solid;
+  text-decoration:none;
+  color:#342A2A;
+  line-height:25px;
+}
+ul.left_menu li.even a:hover, ul.left_menu li.odd a:hover{
+  background-color:#7bbcc7; 
+  color:#FFFFFF;
+  background-position:5px 5px;
+}
+ul.left_menu li a#active{
+  color:#ff6800;
+}
+
+
+
+.banner{
+  width:190px;
+  height:160px;
+  text-align:center;
+  padding:10px 0 10px 0;
+  margin:10px auto 10px auto;
+  border: 1px solid yellow;
+}
+
+
+  
+/*
+  
+=====================GOOD'S CARD=========================
+  
+*/
+.card-title{
+  text-align:center;
+  margin-bottom:20px;
+}
+#good-title{
+  font-size:24px; 
+}
+
+.card-goods{
+  width:inherit;
+  height:auto;
+  padding: 0px;
+  margin:10px 0px;
+}
+.row-card{
+  margin-right:-15px;
+  margin-left:-15px;
+  line-height:1.4;
+
+}
+.col{
+  display:inline-block;
+}
+.col-image{
+  float:left;
+  width:50%;
+  text-align:center;
+  
+}
+.col-information{
+  float:left;
+  width:50%;
+  height:auto;
+}
+.col-image, .col-information{
+  padding-left:15px;
+  padding-right:15px;
+  position:relative;
+}
+.card-goods .image-goods #image-good{
+  width:70%;
+}
+.card-goods .image-goods .hot img{
+  width:85px;
+  height:85px;
+}
+
+.information-goods{
+  padding-bottom:40px;
+  padding-left:40px;
+  padding-top:60px;
+}
+.information-goods .card-order {
+  line-height:1;
+  text-align:center;
+  max-width:250px;
+  margin:15px 0px;
+}
+.information-goods .card-order .button{
+  font-size:26px;
+  height:50px;
+}
+.card-price{
+  margin-bottom:10px;
+}
+.big-price{
+  font-size:32px;
+}
+span.big{
+  font-size:20px;
+}
+#status{
+  font-size:13px;
+  color:#00cc66;
+}
+#code{
+  font-size:13px;
+}
+
+.details{
+  margin-top:15px;
+}
+#details{
+  max-width:100%;
+  font-size:14px;
+}
+.string td:first-child .border-dotted{
+  border-bottom: 1px dotted #c3c3c3;
+  padding-right:40px; 
+}
+
+.string td:first-child .border-dotted div{
+  border-bottom: 1px solid #ffffff;
+  white-space:nowrap;
+  position:relative;
+  bottom:-1px;
+  font-size:13px;
+  display: table-caption;
+}
+.value{
+  padding-left:10px;
+  padding-top:2px;
+}
+
+
+.about-good{
+  text-align:center;
+  font-size:18px;
+}
+#description{
+  margin: 20px 15px;
+}
+#description span{
+  text-align:justify;
+  line-height:26px;
+  font-size:14px;
+  hyphens:auto;
+}
+
+/*
+  
+  =====================FOOTER====================
+  
+ */
+#footer{
+  height:50px;
+  background:#CCFFFF;
+  border-top:#FFFFFF 2px solid;
+  margin:0;
+  padding:0;
+}
+.align-left{
+  float:left;
+  width:50%;
+  text-align:left;
+  padding-left:150px;
+}
+.align-right{
+  float:right;
+  width:50%;
+  text-align:right;
+  padding-right:150px;
+}
+.align-left, .align-right{
+  padding-top:15px;
+  padding-bottom:15px;
+}
+.footer-row{
+  font-size:14px;
+}
