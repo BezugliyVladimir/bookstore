@@ -1,7 +1,7 @@
 <?php include ROOT . '/views/maquette/header.php'; ?>
 
 <div id="center-wrapper" class='clearfix'>
-  <div class="case"><!-- позиционируем слева в 'bd'-->
+  <div class="case">
     <div id="secondary">
       <div class="box-title catalog"><span>Каталог</span></div>
         <ul class="left_menu">
@@ -40,8 +40,7 @@
   </div>
   <div id="box-main">
     <div class="case">
-      <div class="main-content">
-      <!------------ main content ----------->
+      <div class="main-content"><!-- main content area-->
         <div class="card-goods"><!--good-details-->
           <div class = "card-title">
             <span id="good-title"><?=$good['title']; ?></span>
@@ -107,7 +106,7 @@
             <div id = 'description'><p><span><?php echo $good['description']; ?></span></p></div>
           </div>
         </div><!--/good-details-->   
-      </div>
+      </div><!--/main content area-->
     </div>
   </div>  
 </div>

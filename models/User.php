@@ -98,7 +98,7 @@ class User
     */
    public function checkPassword($password)
    {
-         if(mb_strlen($password, 'UTF-8') >= 7) {
+         if(mb_strlen($password, 'UTF-8') > 7) {
             return true;
          }
          return false;

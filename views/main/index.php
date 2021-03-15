@@ -1,6 +1,6 @@
 <?php include ROOT . '/views/maquette/header.php'; ?>
 <div id="center-wrapper" class='clearfix'>
-  <div class="case"><!-- позиционируем слева в 'bd'-->
+  <div class="case">
     <div id="secondary">
       <div class="box-title catalog"><span>Каталог</span></div>
         <ul class="left_menu">
@@ -32,20 +32,19 @@
 <?php
   endforeach;
 ?>
-      <div class="banner"> 
+      <div class="banner">
         <a href="#">
           <h3>Место для Вашей книги</h3>
         </a> 
       </div>
     </div>
   </div>
-  <div id="box-main"><!--позиционируем справа в 'bd'-->
-    <div class="case"><!-- position:static-->
-      <div class="main-content">
+  <div id="box-main">
+    <div class="case">
+      <div class="main-content"><!-- main content area -->
         <div id = "title-main-content">
           <h1>Последние товары</h1>
         </div>
-        <!-- Область основного контента -->
       <?php
        foreach($lastGoods as $good):
       ?>
@@ -88,7 +87,6 @@
         </div>
       <?php endforeach; ?>
         <div class = 'border-goods'></div>
-      <!--   Recommended goods        -->
         <div class="recommended-goods">
           <div id = "title-main-content">
           <h1>Рекомендуемые товары</h1>
@@ -135,7 +133,7 @@
             </div>
            <?php endforeach; ?>        
         </div>
-      </div>
+      </div><!-- /main content area -->
     </div>
   </div>
 </div>

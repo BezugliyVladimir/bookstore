@@ -1,6 +1,6 @@
 <?php include ROOT . '/views/maquette/header.php'; ?>
 <div id="center-wrapper" class='clearfix'>
-  <div class="case"><!-- позиционируем слева в 'bd'-->
+  <div class="case">
     <div id="secondary">
       <div class="box-title catalog"><span>Каталог</span></div>
       <ul class="left_menu">
@@ -18,10 +18,9 @@
   <div id="box-main">
     <div class="case">
       <div class="main-content">
-        <div id = "title-main-content">
+        <div id = "title-main-content"><!-- Main content area -->
           <h1>Оформление заказа</h1>
         </div>
-        <!-- Область основного контента -->
         <div class = 'results'>
         <?php if ($result): ?>
           <p>Заказ оформлен. Наш менеджер свяжется с Вами.</p>
@@ -53,7 +52,7 @@
           </form>
         </div>
         <?php endif;?>
-      </div>
+      </div><!-- / Main content area -->
     </div>
   </div>
 </div>

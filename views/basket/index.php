@@ -1,6 +1,6 @@
 <?php include ROOT . '/views/maquette/header.php'; ?>
 <div id="center-wrapper" class='clearfix'>
-  <div class="case"><!-- позиционируем слева в 'bd'-->
+  <div class="case">
     <div id="secondary">
       <div class="box-title catalog"><span>Каталог</span></div>
         <ul class="left_menu">
@@ -37,13 +37,12 @@
       </div>
     </div>
   </div>
-  <div id="box-main"><!--позиционируем справа в 'bd'-->
-    <div class="case"><!-- position:static-->
-      <div class="main-content">
+  <div id="box-main">
+    <div class="case">
+      <div class="main-content"><!-- main content area -->
         <div id = "title-main-content">
           <h1>Ваша корзина</h1>
         </div>
-        <!-- Область основного контента -->
         <form id = "cart" method = "post" action = "/basket">
          <?php 
           $numberGood = 1;
@@ -60,7 +59,6 @@
                <a id="product" href='/good/<?=$good['id']?>'>
                  <div class='prod-title center'>
                    <object>
-                     <!-- page=details - ссылка на карточку товара -->
                      <a href='/good/<?=$good['id']?>' title='<?=$good['title']?>'><?=$good['title']?></a>
                    </object>
                  </div>
@@ -108,7 +106,7 @@
           <div id="no-goods"><span id ="empty-basket">В корзине товаров нет!</span></div>
           <?php endif; ?>
         </form>
-      </div>
+      </div><!-- / main content area-->
     </div>
   </div>
 </div>

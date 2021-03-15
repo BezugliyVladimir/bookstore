@@ -13,7 +13,6 @@
     </style>
     <![endif]-->
     <script type="text/javascript" src="/template/js/main.js"></script>
-    <!--<script type="text/javascript" src="/template/js/register.js"></script>-->
   </head>
   
   <body>
