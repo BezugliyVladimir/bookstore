@@ -63,7 +63,7 @@ class Pagination
       $html = '<ul class="pagination">';
       
       // Генерация ссылок
-      for ($page = $limits[0]; $page <= $limits[1]; $page++) {
+      for ($page = $limits['start']; $page <= $limits['end']; $page++) {
           // Ссылка для текущей страницы
           if ($page == $this->current_page) {
               $links .= '<li class="current"><a href="#">' . $page . '</a></li>';
@@ -141,7 +141,7 @@ class Pagination
           $start = $this->amount - $this->max > 0 ? $this->amount - $this->max : 1;
       }
 
-      return array($start, $end);
+      return array('start' => $start, 'end' => $end);
   }
 
   /**
