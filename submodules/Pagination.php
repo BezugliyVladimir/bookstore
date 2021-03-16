@@ -7,7 +7,7 @@
 class Pagination
 {
 
-  // количество cсылок навигации на страницу
+  // количество cсылок навигации на странице
   private $max = 10;
 
   //ключ для URL, в который пишется номер страницы
@@ -21,6 +21,9 @@ class Pagination
 
   // количество записей на страницу
   private $limit;
+  
+  // всего страниц для текущей категории товаров
+  private $amount;
 
   /**
    * Установка данных для навигации
@@ -63,7 +66,7 @@ class Pagination
       for ($page = $limits[0]; $page <= $limits[1]; $page++) {
           // Ссылка для текущей страницы
           if ($page == $this->current_page) {
-              $links .= '<li class="active"><a href="#">' . $page . '</a></li>';
+              $links .= '<li class="current"><a href="#">' . $page . '</a></li>';
           } else {
               // Ссылка на другие страницы
               $links .= $this->generateHtml($page);
@@ -99,15 +102,18 @@ class Pagination
   private function generateHtml($page, $text = null)
   {
       
-      if (!$text)
+      if (!$text){
       // текстовый элемент - номер страницы
           $text = $page;
+      }
 
       $currentURI = rtrim($_SERVER['REQUEST_URI'], '/') . '/';
       $currentURI = preg_replace('~/page-[0-9]+~', '', $currentURI);
-      // Формируется HTML-строка ссылки и возвращается
-      return
-              '<li><a href="' . $currentURI . $this->index . $page . '">' . $text . '</a></li>';
+      
+      // HTML-строка ссылки
+      $html_link = '<li><a href="' . $currentURI . $this->index . $page . '">' . $text . '</a></li>';
+      return $html_link;
+              
   }
 
   /**
@@ -125,18 +131,17 @@ class Pagination
 
       // Если впереди есть как минимум $this->max страниц
       if ($start + $this->max <= $this->amount)
-      // Назначаем конец цикла вперёд на $this->max страниц или просто на минимум
+      // Назначаем конец цикла вперёд на $this->max страниц
           $end = $start > 1 ? $start + $this->max : $this->max;
       else {
-          // Конец - общее количество страниц
+          // Иначе концом будет максимальное количество страниц
           $end = $this->amount;
 
-          // Начало - минус $this->max от конца
+          // Начало - минус $this->max от конца или 1
           $start = $this->amount - $this->max > 0 ? $this->amount - $this->max : 1;
       }
 
-      return
-        array($start, $end);
+      return array($start, $end);
   }
 
   /**
@@ -155,7 +160,7 @@ class Pagination
           // Если текущая страница больше общего количества страниц
           if ($this->current_page > $this->amount)
           
-              // Устанавливаем страницу на последнюю
+              // то текущая страница - последняя
               $this->current_page = $this->amount;
       } else
      
