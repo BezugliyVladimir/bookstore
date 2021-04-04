@@ -836,8 +836,8 @@ ul.pagination{
 ul li{
   list-style:none;
 }
-.pagination .active a, .pagination .active a:hover,
-.pagination .active a:focus{
+.pagination .current a, .pagination .current a:hover,
+.pagination .current a:focus{
   background-color:#FE980F;
   border-color:#FE980F;
   color:#ffffff;

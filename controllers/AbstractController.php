@@ -91,7 +91,7 @@
    
    /**
     * Фильтрация данных 
-    * @param mixed $data - входящие данные
+    * @param scalar $data - входящие данные
     * @return integer - отфильтрованные данные
     */
    public static function clearInt($data) {
