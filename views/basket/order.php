@@ -9,9 +9,9 @@
         <?php endforeach;?>
       </ul>
       <div class="banner"> 
-        <a href="#">
-          <h3>Место для Вашей книги</h3>
-        </a> 
+        <div class='prod-author'>
+            <span title='Автор'><?=$good['author']?></span>     
+        </div>
       </div>
     </div>
   </div>
